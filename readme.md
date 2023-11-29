@@ -35,3 +35,11 @@
   set PORT=3000
   set SECRET_KEY=mysecretkey
 - yarn start
+
+## acesso swagger
+
+- http://localhost:3000/docs
+
+## token de autenticacao
+
+- header Authorization no swagger em cada rota
