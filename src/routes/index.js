@@ -1,7 +1,13 @@
-const express = require("express");
-const router = express.Router();
+const userRoutes = require("./userRoutes");
+const swaggerUi = require("swagger-ui-express");
+const swaggerFile = require("../swagger_output.json");
 
-// Defina suas rotas aqui
-// Exemplo: router.get('/users', UserController.getAllUsers);
+swaggerFile.assert = { type: "json" };
 
-module.exports = router;
+const routes = (app) => {
+  app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
+  app.use("/api", userRoutes);
+};
+
+module.exports = routes;
