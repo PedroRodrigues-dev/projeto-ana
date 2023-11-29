@@ -17,8 +17,8 @@
     "swagger-ui-express": "^5.0.0"
   },
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "node src/server.js",
+    "dev": "yarn swagger && nodemon src/server.js",
+    "start": "yarn swagger && node src/server.js",
     "swagger": "node  src/swagger.js"
   }
 }

@@ -7,7 +7,7 @@ const {
   updateLogError,
   deleteLogError,
 } = require("../controllers/LogErrorController");
-const authenticateToken = require("../middlewares/auth");
+const { authenticateToken } = require("../middlewares/auth");
 
 router.get("/logError", authenticateToken, getAllLogErrors, () => {
   /* #swagger.tags = ['LogError'] */

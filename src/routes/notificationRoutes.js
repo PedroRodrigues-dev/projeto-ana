@@ -7,7 +7,7 @@ const {
   updateNotification,
   deleteNotification,
 } = require("../controllers/NotificationController");
-const authenticateToken = require("../middlewares/auth");
+const { authenticateToken } = require("../middlewares/auth");
 
 router.get("/notification", getAllNotifications, () => {
   /* #swagger.tags = ['Notification'] */

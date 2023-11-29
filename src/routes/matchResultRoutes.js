@@ -7,7 +7,7 @@ const {
   updateMatchResult,
   deleteMatchResult,
 } = require("../controllers/MatchResultController");
-const authenticateToken = require("../middlewares/auth");
+const { authenticateToken } = require("../middlewares/auth");
 
 router.get("/matchResults", getAllMatchResults, () => {
   /* #swagger.tags = ['MatchResult'] */

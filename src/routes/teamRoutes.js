@@ -7,9 +7,9 @@ const {
   updateTeam,
   deleteTeam,
 } = require("../controllers/TeamController");
-const authenticateToken = require("../middlewares/auth");
+const { authenticateToken } = require("../middlewares/auth");
 
-router.get("/team", getAllTeams, () => {
+router.get("/team", authenticateToken, getAllTeams, () => {
   /* #swagger.tags = ['Team'] */
 });
 router.get("/team/:id", authenticateToken, getTeamById, () => {

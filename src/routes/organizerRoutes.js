@@ -7,7 +7,7 @@ const {
   updateOrganizer,
   deleteOrganizer,
 } = require("../controllers/OrganizerController");
-const authenticateToken = require("../middlewares/auth");
+const { authenticateToken } = require("../middlewares/auth");
 
 router.get("/organizer", getAllOrganizers, () => {
   /* #swagger.tags = ['Organizer'] */
